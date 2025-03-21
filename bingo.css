@@ -1,0 +1,25 @@
+body, html {
+    background-color: rgb(188, 163, 246);
+    margin:0;
+    padding:0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabela{
+    background-color: aliceblue;
+    border: 5px double #000;
+    border-radius: 5%;
+    font-size: 50px;
+    padding: 5px 8px;
+    background-color: rgb(182, 121, 240);
+}
+td{
+    border:1px solid;
+    border-radius:5%;
+    text-align: center;
+    padding: 5px 8px;
+    background-color: rgb(222, 207, 253);
+}
