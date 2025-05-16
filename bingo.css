@@ -1,25 +1,25 @@
 body, html {
-    background-color: rgb(188, 163, 246);
+    background-color: #8b61cf;
     margin:0;
-    padding:0;
+    padding: 0;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .tabela{
-    background-color: aliceblue;
-    border: 5px double #000;
-    border-radius: 5%;
+    background-color: #e5dfff;
+    border:5px double #e7c4ff;
     font-size: 50px;
     padding: 5px 8px;
-    background-color: rgb(182, 121, 240);
+    border-radius: 20px;
 }
 td{
     border:1px solid;
-    border-radius:5%;
+    border-radius: 5%;
     text-align: center;
     padding: 5px 8px;
-    background-color: rgb(222, 207, 253);
+    width: 50px;
 }
