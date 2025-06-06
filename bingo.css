@@ -1,25 +1,32 @@
-body, html {
-    background-color: #8b61cf;
-    margin:0;
+body, html{
+    background-color: #c1e2ff;
+    margin: 0;
     padding: 0;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.tabela{
-    background-color: #e5dfff;
-    border:5px double #e7c4ff;
+  
+  }
+  
+  .tabela{
+    background-color: aliceblue;
+    border: 5px double #669edf;
+    border-radius: 5%;
     font-size: 50px;
     padding: 5px 8px;
-    border-radius: 20px;
-}
-td{
-    border:1px solid;
+  }
+  td{
+    border: 2px solid #669edf;
     border-radius: 5%;
     text-align: center;
     padding: 5px 8px;
     width: 50px;
-}
+    color:cornflowerblue;
+  }
+  
+  
+  .titulo{
+    color: #669edf;
+  
+  }
