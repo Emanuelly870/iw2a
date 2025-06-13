@@ -1,5 +1,5 @@
 body, html{
-    background-color: #c1e2ff;
+    background-color: #fddbfd;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -10,23 +10,23 @@ body, html{
   }
   
   .tabela{
-    background-color: aliceblue;
-    border: 5px double #669edf;
+    background-color: #fff1ff;
+    border: 5px double #BA55D3;
     border-radius: 5%;
     font-size: 50px;
     padding: 5px 8px;
   }
   td{
-    border: 2px solid #669edf;
+    border: 2px solid #BA55D3;
     border-radius: 5%;
     text-align: center;
     padding: 5px 8px;
     width: 50px;
-    color:cornflowerblue;
+    color:#BA55D3;
   }
   
   
   .titulo{
-    color: #669edf;
+    color: #cc00ff;
   
   }
