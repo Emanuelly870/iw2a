@@ -220,9 +220,9 @@
         }
         Sorteio = MisturarArray(Sorteio)
 
-        function NumeroAleatorio(numeroMinimo, numeroMaximo) { //declara numero minimo e maximo
-            var retorno = Math.floor(Math.random() * numeroMaximo) //biblioteca de matematica dentro do java, floor aredonda o numero, radom gera aleatoriamente
-            if (retorno > 0 && retorno >= numeroMinimo && retorno <= numeroMaximo)// declara que o retorno tem que ser maior que 0 e tem q ser maior ou igual ao minimo e menor que o maximo
+        function NumeroAleatorio(numeroMinimo, numeroMaximo) {
+            var retorno = Math.floor(Math.random() * numeroMaximo)
+            if (retorno > 0 && retorno >= numeroMinimo && retorno <= numeroMaximo)
             {
                 return retorno
             }
@@ -259,6 +259,31 @@
             } 
             return array
         }
+
+        const numerosSorteados = new Set();
+
+        function MarcarNumeroAleatório( ){
+            if (numerosSorteados.size >= 75) {
+            alert("Todos os números já foram sorteados!");
+            return;    
+            }
+            let numero;
+            do {
+                numero = Math.floor(Math.random() * 75) +1;
+              }  while (numerosSorteados.has(numero));
+              numerosSorteados.add(numeros);
+              
+
+        const todasCelulas = document.quarySelectorAll("td");
+        todasCelulas. forEach(celula => {
+            if (parseInt(celula.texContent.trim(), 10) === numero) {
+                celula.style.backgrandColor ='purple';
+                celula.style.color = 'white'; 
+            }
+        });      
+
+        }
+
     </script>
 
 
