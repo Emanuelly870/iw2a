@@ -9,7 +9,7 @@
 
 body {
   text-align: center;
-  background: linear-gradient(to bottom, #0086bb, #ffffff);
+  background: linear-gradient(to bottom, #6B8E23, #9ACD32, #ffffff);
   min-height: 100vh;
 }
 
@@ -27,9 +27,9 @@ main {
 
 .pokemon__image {
   position: absolute;
-  bottom: 55%;
-  left: 50%;
-  transform: translate(-63%, 20%);
+  bottom: 80%;
+  left: 80%;
+  transform: translate(70%, 50%);
   height: 18%;
 }
 
