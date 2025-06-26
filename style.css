@@ -9,7 +9,7 @@
 
 body {
   text-align: center;
-  background: linear-gradient(to bottom, #6B8E23, #9ACD32, #ffffff);
+  background: linear-gradient(to bottom, #0086bb, #ffffff);
   min-height: 100vh;
 }
 
@@ -20,16 +20,16 @@ main {
   position: relative;
 }
 
-.pokedexm {
-  width: 100%;
+.pokedex {
+  width: 300px;
   max-width: 425px;
 }
 
 .pokemon__image {
   position: absolute;
-  bottom: 80%;
-  left: 80%;
-  transform: translate(70%, 50%);
+  bottom: 55%;
+  left: 50%;
+  transform: translate(-63%, 20%);
   height: 18%;
 }
 
@@ -45,6 +45,7 @@ main {
 .pokemon__name {
   color: #c70000;
   text-transform: capitalize;
+  position: absolute;
 }
 
 .form {
