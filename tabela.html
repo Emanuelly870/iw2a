@@ -1,71 +1,159 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">CineAlegria</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-3">
+          <li class="nav-item"><a class="nav-link active" href="#">Ínicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Mais Vistos</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Categorias</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Categorias</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
+          <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1">Lançamentos</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="row mb-3">
-   
-  </div>
+  <div class="container my-4">
 
-  <div class="card">
-    <div class="card-header">
-      Featured
+    <div class="card mb-4">
+      <div class="card-header">Pesquisar Filmes</div>
+      <div class="card-body">
+        <form class="row g-2 align-items-center">
+          <div class="col-auto">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</button>
+
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Pesquise aqui...">
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Pesquisar</button>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="card-body">
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-              <form class="d-flex" role="search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-            </div>
-          </nav>
+
+    <div class="card">
+      <div class="card-header">Filme</div>
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table mb-0 align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>Ano</th>
+                <th>Nome</th>
+                <th>Diretor</th>
+                <th>Data de Lançamento</th>
+                <th class="text-end">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1999</strong></td>
+                <td>Matrix</td>
+                <td>Wachowski</td>
+                <td>21/05/1999</td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-warning">Editar</button>
+                  <button class="btn btn-sm btn-danger">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2010</strong></td>
+                <td>Inception</td>
+                <td>Christopher Nolan</td>
+                <td>06/08/2010</td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-warning">Editar</button>
+                  <button class="btn btn-sm btn-danger">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2009</strong></td>
+                <td>Avatar</td>
+                <td>James Cameron</td>
+                <td>18/12/2009</td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-warning">Editar</button>
+                  <button class="btn btn-sm btn-danger">Excluir</button>
+                </td>
+              </tr>
+              <tr> 
+                <td><strong>2023</strong></td>
+                <td>Oppenheimer</td>
+                <td>Christopher Nolan</td>
+                <td>20/07/2023</td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-warning">Editar</button>
+                  <button class="btn btn-sm btn-danger">Excluir</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
-    </ul>
-  </div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
 
-  <div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">rfre</li>
-      <li class="list-group-item">A reea</li>
-      <li class="list-group-item">A ghggyyem</li>
-    </ul>
-  </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Nome</span>
+  <input type="text" id="Nome" class="form-control" placeholder="Digite seu Nome" aria-label="Username" aria-describedby="basic-addon1">
+</div>
 
-  <div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">vbcbggf</li>
-      <li class="list-group-item">yh nbym</li>
-      <li class="list-group-item">iuoki</li>
-    </ul>
+ <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Email</span>
+  <input type="text" id="Email" class="form-control" placeholder="Digite seu Email" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Senha</span>
+  <input type="text" id="Senha" class="form-control" placeholder="Digite sua Senha" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
   </div>
+  <input type="text" value="Ativo?" class="form-control" aria-label="Text input with checkbox">
+</div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-success">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
