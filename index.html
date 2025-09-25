@@ -81,12 +81,77 @@
         Function carregar(pesquisa = "") {
             left url = API_URL;
             if(pesquisa) {
-             url =+   
+             url =+ "?Pesquisa=" + encodeURIComponent(pesquisa);
+            }
+            fetch(url)
+            .then(resposta=> resposta.json())
+            .then(dados => {
+                console.log(dados)
+                dados.forEach(usuarios => {
+                    const tr = create.Element("tr");
+                    tr.innerHTML = 
+                    <td>${usuarios.ID}</td>
+                    <td>${usuarios.LOGIN}</td>
+                    <td>${usuarios.NOME}</td>
+                    <td>${usuarios.EMAIL}</td>
+                    <td>${usuarios.ATIVO = 1 ? "Sim" "Não"}</td>
+                    <td>
+                        <button onclik='editar'(${JSON.stringify(usuarios)})'Editar'</button>
+                        <button onclik='excluir'(${usuarios.ID})'Excluir'</button>
+                        </td>
+                        ;
+                    tbody.appendChild(tr);
+                });
+            })
+
+            const tbody = document.querySelector("#tabela tbody");
+            tbody.innerHTML = "";
+        }
+
+        function carregarPesquisa() {
+            const valor = document.getElementById("pesquisa").value;
+            carregar(valor);
+        }
+
+        async function salvar() {
+            const id = document.getElementById("id").value;
+            const login = document.getElementById("login").value;
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+            const ativo = document.getElementById("ativo").value;
+
+            const playload  = {ID: id, LOGIN: login, NOME: nome, Email: email, SENHA: senha, ATIVO: ativo };
+
+            if (id) {
+                await fetch(API_URL, {method: "PUT", body: JSON.stringify(playload) });
+            } else {
+                await fetch(API_URL, {method: "POST", body: JSON.stringify(playload) });
             }
 
+            limpar();
+            carregar();
         }
-    </script>
+    
+        function editar(usuarios) {
+            document.getElementById("id").value = usuarios.ID;
+            document.getElementById("logim").value = usuarios.LOGIN;
+            document.getElementById("nome").value = usuarios.NOME;
+            document.getElementById("email").value = usuarios.EMAIL;
+            document.getElementById("senha").value = usuarios.SENHA;
+            document.getElementById("ativo").value = usuarios.ATIVO;
+        }
+
+    async function excluir(id) {
+        if (confirm("Deseja excluir este usuário?")) {
+            await fetch (API_URL +  "?id=" + id, {method: "DELETE"});
+            carregar ();
+        }
+    }       
 
 
+
+    
+        </script>
     </body>
     </html>
