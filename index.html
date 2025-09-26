@@ -89,17 +89,17 @@
                 console.log(dados)
                 dados.forEach(usuarios => {
                     const tr = create.Element("tr");
-                    tr.innerHTML = 
+                    tr.innerHTML = `
                     <td>${usuarios.ID}</td>
                     <td>${usuarios.LOGIN}</td>
                     <td>${usuarios.NOME}</td>
                     <td>${usuarios.EMAIL}</td>
                     <td>${usuarios.ATIVO = 1 ? "Sim" "Não"}</td>
                     <td>
-                        <button onclik='editar'(${JSON.stringify(usuarios)})'Editar'</button>
-                        <button onclik='excluir'(${usuarios.ID})'Excluir'</button>
+                        <button onclick='editar(${JSON.stringify(usuarios)})'>Editar</button>
+                        <button onclik='excluir(${usuarios.ID})'>Excluir</button>
                         </td>
-                        ;
+                        `;
                     tbody.appendChild(tr);
                 });
             })
@@ -135,7 +135,7 @@
     
         function editar(usuarios) {
             document.getElementById("id").value = usuarios.ID;
-            document.getElementById("logim").value = usuarios.LOGIN;
+            document.getElementById("login").value = usuarios.LOGIN;
             document.getElementById("nome").value = usuarios.NOME;
             document.getElementById("email").value = usuarios.EMAIL;
             document.getElementById("senha").value = usuarios.SENHA;
@@ -143,15 +143,25 @@
         }
 
     async function excluir(id) {
-        if (confirm("Deseja excluir este usuário?")) {
+        if (confirm("Deseja excluir este usuário?")) 
+        { else 
             await fetch (API_URL +  "?id=" + id, {method: "DELETE"});
             carregar ();
         }
     }       
 
+    function limpar() {
+        document.getElementById("id").value = "";
+        document.getElementById("login").value = "";
+        document.getElementById("nome").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("senha").value = "";
+        document.getElementById("ativo").value = "1";
+    }
 
-
-    
+    carregar();
         </script>
+
     </body>
+
     </html>
